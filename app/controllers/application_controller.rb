@@ -3,6 +3,7 @@ require 'sinatra/base'
 class App < Sinatra::Base
 
   get '/' do
+
     erb :super_hero
   end
   
@@ -17,8 +18,12 @@ class App < Sinatra::Base
     @Heroes = Hero.all
     erb :team
     end
-
     set :views, Proc.new { File.join(root, "../views/") }
+    erb :'views/super_hero'
+  end
 
 
-end
+
+
+
+    
