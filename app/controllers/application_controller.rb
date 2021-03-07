@@ -9,7 +9,7 @@ class App < Sinatra::Base
   end
 
   post '/team' do
-    binding.pry
+    #binding.pry
     @team_name = params[:team][:name]
     @team_motto = params[:team][:motto]
     @hero_name = []
@@ -19,7 +19,7 @@ class App < Sinatra::Base
     @team_members.each do |hero|
       @hero_name << hero[:name]
       @hero_power << hero[:power]
-      @hero_bio << hero[:bio]
+      @hero_bio << hero[:biography]
     end
 
     erb :team
