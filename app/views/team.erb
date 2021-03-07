@@ -2,15 +2,15 @@
 <h1> Your Team </h1>
 <% binding.pry %>
 <div class="team">
-  <h3>Name: <%= @team_name %></h3><br>
-  <h4>Motto: <%= @team_motto %></h4>
+  <h3>Team Name:<%= @team_name %></h3><br>
+  <h4>Team Motto:<%= @team_motto %></h4>
 </div><br>
 
 <h1>Heros</h1>
 <% @team_members.each do |hero| %>
   <div class="hero">
-    <p>Name: <%= hero[:name] %></p><br>
-    <p>Hero Power: <%= hero[:power] %></p><br>
-    <p>Bio: <%= hero[:biography] %></p>
+    <p>Hero Name:<%= hero[:name] %></p><br>
+    <p>Hero Power:<%= hero[:power] %></p><br>
+    <p>Hero Bio:<%= hero[:biography] %></p>
   </div><br>
 <% end %>
